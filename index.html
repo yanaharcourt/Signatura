@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Сигнатура - Школа брейкинга в Волгограде. Твой почерк в танце.</title>
   <meta name="description" content="Школа брейкинга «Сигнатура» в Волгограде. Для детей от 4 лет. Спорт и творчество в одном месте. Первое занятие - бесплатно. Тел: 8 (909) 394-26-28">
 
@@ -441,7 +441,7 @@
  
     /* ═══ 768px ═══ */
     @media (max-width: 768px) {
-      nav { padding: 12px 16px }
+      nav { padding: 12px 16px; padding-top: calc(12px + env(safe-area-inset-top)) }
       .navl, .nav-btn { display: none }
       .burger { display: flex }
       .navr { gap: 8px }
@@ -533,7 +533,7 @@
  
     /* ═══ 414px ═══ */
     @media (max-width: 414px) {
-      nav { padding: 12px 14px }
+      nav { padding: 12px 14px; padding-top: calc(12px + env(safe-area-inset-top)) }
       .logo-img { width: 44px }
       .logo-text { font-size: 18px }
       .hero-left { padding: 76px 14px 28px }
