@@ -5,8 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сигнатура - Школа брейкинга в Волгограде. Твой почерк в танце.</title>
-  <meta name="description"
-    content="Школа брейкинга «Сигнатура» в Волгограде. Для детей от 4 лет. Спорт и творчество в одном месте. Первое занятие - бесплатно. Тел: 8 (909) 394-26-28">
+  <meta name="description" content="Школа брейкинга «Сигнатура» в Волгограде. Для детей от 4 лет. Спорт и творчество в одном месте. Первое занятие - бесплатно. Тел: 8 (909) 394-26-28">
+
+  <!-- SEO -->
+  <meta name="description" content="Школа брейкинга «Сигнатура» в Волгограде. Занятия для детей от 4 лет в КДК «21 ВЕК». Первое занятие бесплатно. Запишитесь по телефону 8 (909) 394-26-28.">
+  <meta name="keywords" content="брейкинг Волгоград, школа брейкинга, брейк-данс для детей, танцы для детей Волгоград, КДК 21 век, Сигнатура, брейкинг от 4 лет">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://signatura-volgograd.ru/">
+
+  <!-- Open Graph (соцсети, WhatsApp, Telegram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://signatura-volgograd.ru/">
+  <meta property="og:title" content="Сигнатура — школа брейкинга в Волгограде">
+  <meta property="og:description" content="Брейкинг для детей от 4 лет. Сцена, соревнования и настоящий результат. Первое занятие бесплатно.">
+  <meta property="og:image" content="https://signatura-volgograd.ru/assets/img/og-image.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Сигнатура">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Сигнатура — школа брейкинга в Волгограде">
+  <meta name="twitter:description" content="Брейкинг для детей от 4 лет. Первое занятие бесплатно.">
+  <meta name="twitter:image" content="https://signatura-volgograd.ru/assets/img/og-image.jpg">
+
+  <!-- Геолокация -->
+  <meta name="geo.region" content="RU-VGG">
+  <meta name="geo.placename" content="Волгоград">
+  <meta name="geo.position" content="48.770449;44.489396">
+  <meta name="ICBM" content="48.770449, 44.489396">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -240,9 +267,13 @@
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: rgba(255, 230, 0, .55);
+      color: rgba(255, 230, 0, .85);
       width: fit-content;
-      margin-bottom: 16px;
+      position: absolute;
+      top: 100px;
+      left: 48px;
+      z-index: 3;
+      margin-bottom: 0;
       animation: fadeUp .8s .1s both
     }
 
@@ -250,17 +281,17 @@
       display: none
     }
 
-    /* ANCHOR OBJECT: заголовок - доминирующий, максимальный вес */
+    /* ANCHOR OBJECT */
     .htitle {
       font-family: var(--font-display);
       font-size: clamp(72px, 12vw, 160px);
       line-height: .86;
       letter-spacing: -1px;
-      color: var(--color-text-primary);
+      color: rgba(255, 255, 255, 0.85);
       animation: fadeUp .8s .2s both;
       overflow-wrap: normal;
       word-break: keep-all;
-      margin-bottom: 28px;
+      margin-bottom: 40px;
     }
 
     .htitle .y {
@@ -295,7 +326,7 @@
     }
 
     .hdesc strong {
-      color: var(--color-text-primary);
+      color: rgba(255, 230, 0, .5);
       font-weight: 700
     }
 
@@ -328,7 +359,9 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)
+      background: 
+        linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 40%),
+        linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)
     }
 
     .btn-y {
@@ -369,15 +402,17 @@
     }
 
     .hphone-ghost {
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--color-text-muted);
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2vw, 26px);
+      font-weight: 700;
+      color: rgba(255, 255, 255, .85);
       text-decoration: none;
-      letter-spacing: .5px;
+      letter-spacing: 2px;
       transition: color .2s;
-      border-bottom: 1px solid rgba(255, 230, 0, .2);
-      padding-bottom: 2px;
+      position: absolute;
+      bottom: 86px;
+      right: 48px;
+      z-index: 3;
     }
 
     .hphone-ghost:hover {
@@ -406,22 +441,40 @@
     .hero-scroll {
       position: absolute;
       bottom: 32px;
-      left: 48px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 12px;
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
+      gap: 10px;
       z-index: 2;
       animation: fadeIn 1s 1.5s both
     }
 
-    .scroll-bar {
-      width: 48px;
-      height: 1px;
-      background: linear-gradient(to right, var(--color-accent), transparent)
+    .scroll-oval {
+      width: 40px;
+      height: 54px;
+    }
+
+    .scroll-oval-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .scroll-arrow {
+      animation: scrollBounce 1.6s ease-in-out infinite;
+    }
+
+    .scroll-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(-4px); opacity: 0.4; }
+      50% { transform: translateY(4px); opacity: 1; }
     }
 
     /* Noise */
@@ -2708,7 +2761,6 @@
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="home">
     <div class="hero-left">
-      <div class="hero-tag">Волгоград · С 2015 года · от 4 лет</div>
       <h1 class="htitle">СИГНАТУРА</h1>
       <p class="hslogan">Твой почерк в танце</p>
       <p class="hdesc">Там, где <strong>творчество соединяется со спортом</strong>. Брейкинг для детей от 4 лет - сцена, соревнования и настоящий результат.</p>
@@ -2719,15 +2771,26 @@
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
-        <a href="tel:89093942628" class="hphone-ghost">8 (909) 394-26-28</a>
       </div>
     </div>
+
     <div class="hero-right">
       <img src="assets/img/hero.jpg" alt="Брейкинг">
     </div>
+
+    <div class="hero-tag">Волгоград · С 2015 года · от 4 лет</div>
+
+    <a href="tel:89093942628" class="hphone-ghost">8 (909) 394-26-28</a>
+
     <div class="hero-scroll">
-      <div class="scroll-bar"></div>
-      прокрути
+      <div class="scroll-oval">
+        <svg class="scroll-oval-svg" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.5" y="1.5" width="45" height="61" rx="22.5" stroke="rgba(255,230,0,0.5)" stroke-width="1.5"/>
+          <line class="scroll-arrow" x1="24" y1="14" x2="24" y2="42" stroke="#FFE600" stroke-width="1.5" stroke-linecap="round"/>
+          <polyline class="scroll-arrow" points="16,34 24,44 32,34" stroke="#FFE600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="scroll-label">прокрути</span>
     </div>
   </section>
 
